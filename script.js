@@ -117,46 +117,37 @@ function generatePassword() {
     console.log("Answers", length, includeLowercase, includeUppercase, includeNumbers, includeCharacters)
 
     if (includeUppercase) {
-        characterArray = characterArray.concat(upperCasedCharacters)
+        characterArray = characterArray.concat(upperCasedCharacters);
     }
     
     if (includeLowercase) {
-        characterArray = characterArray.concat(lowerCasedCharacters)
+        characterArray = characterArray.concat(lowerCasedCharacters);
     }
 
     if (includeNumbers) {
-        characterArray = characterArray.concat(numericCharacters)
+        characterArray = characterArray.concat(numericCharacters);
     }
 
     if (includeCharacters) {
-        characterArray = characterArray.concat(specialCharacters)
+        characterArray = characterArray.concat(specialCharacters);
     }
 
-    console.log("Character Array", characterArray)
+    console.log("Character Array", characterArray);
 
 //<-- Pick number of random characters out of the concatenated [characterArrays] -->
 
         // Array to store types of characters to include in password
-        var result = [];
+    var result = [];
 
         // For loop to iterate over the password length from the options object, selecting random indices from the array of possible characters and concatenating those characters into the result variable
-        for (var i = 0; i < length; i++) {
-            var possibleCharacter = getRandom(characterArray);
+    for (var i = 0; i < length; i++) {
+        var possibleCharacter = getRandom(characterArray);
 
-            result.push(possibleCharacter);
-            //console log everything
-            }
-        console.log(result)
+        result.push(possibleCharacter);
+    };
 
-
-//turn array into a string
-// return the string
-
-
+return result.join("");
 }
-
-
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -166,24 +157,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-// var myNumber = 10
-// var myString = "this is string"
-// var myArray = ["one", 1, 2, 3]
-
-// var arrayLength=myArray.length
-// var slicedArray=myArray.slice(1, 2)
-
-// console.log("Array", myArray[1])
-
-// var myObject= {
-//     color: "blue", 
-//     year: 2000,
-//     //Objects can also contain methods
-// }
-// console.log("object", myObject.color)
-
-// function myFunction() {
-//     console.log();
-// }
-// myFunction()
