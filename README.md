@@ -25,6 +25,6 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 ```
 ## Webpage Screenshot
-You can find my URL:
+You can find my URL: https://gdonna.github.io/Javascript-Password-Generator/
 
 ![Javascript-Password-Generator](./assets/Images/127.0.0.1_5500_index.html%20(1).png)
